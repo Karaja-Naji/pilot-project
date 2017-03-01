@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Test App</title>
+    <!--Library-->
+    <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="lib/jquery/jquery-ui.css">
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/jquery/jquery-ui.js"></script>
+    <script src="lib/picUpload/jquery.ui.widget.js"></script>
+    <script src="lib/picUpload/jquery.iframe-transport.js"></script>
+    <script src="lib/picUpload/jquery.fileupload.js"></script>
+
+
+    <!--vendors-->
+    <link href="vendors/css/style.css" rel="stylesheet">
+  </head>
+  <body>
+
+
+<div class="container"><h2>We have two Departments</h2>
+
+<div id="accordion">
+  <h3>Markiting</h3>
+
+      <div class="tab-pane active" id="markiting">
+        <button class="create-user" data-departmentid="58accd819666a1de296cdfb4">Create new user</button>
+              <div class="container bootstrap snippet">
+               <div class="row">
+                  <div class="col-lg-12">
+                     <div class="main-box no-header clearfix">
+                        <div class="main-box-body clearfix">
+                           <div class="table-responsive">
+                              <table id="marketing-employee" class="table user-list">
+                                 <thead>
+                                    <tr>
+                                       <th><span>User</span></th>
+                                       <th><span>Email</span></th>
+                                       <th>&nbsp;</th>
+                                    </tr>
+                                 </thead>
+                                 <tbody>
+
+
+                                 </tbody>
+                              </table>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+          </div>
+      </div>
+  <h3>Finance</h3>
+              <div class="tab-pane" id="finance">
+              <button class="create-user" data-departmentid="58accd8d9666a1de296cdfb5">Create new user</button>
+                <div class="container bootstrap snippet">
+                 <div class="row">
+                    <div class="col-lg-12">
+                       <div class="main-box no-header clearfix">
+                          <div class="main-box-body clearfix">
+                             <div class="table-responsive">
+                                <table id="finance-employee" class="table user-list">
+                                   <thead>
+                                      <tr>
+                                         <th><span>User</span></th>
+                                         <th><span>Email</span></th>
+                                         <th>&nbsp;</th>
+                                      </tr>
+                                   </thead>
+                                   <tbody>
+
+
+                                   </tbody>
+                                </table>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                </div>
+          </div>
+
+</div>
+
+
+    </div>
+  </body>
+
+
+
+<div id="dialog-form" title="Create new user">
+ <p class="validateTips">All form fields are required.</p>
+
+ <form id="add-user-form"  enctype="multipart/form-data" >
+   <fieldset>
+     <label for="name">Name</label>
+     <input type="text" name="name" id="name" value="" class="text ui-widget-content ui-corner-all">
+     <br/>
+     <label for="email">Email</label>
+     <input type="text" name="email" id="email" value="" class="text ui-widget-content ui-corner-all">
+
+     <input type="hidden" name="image_url" id="image_url" value="uploads/user-default-pic.gif" class="text ui-widget-content ui-corner-all">
+
+    <input type="hidden" name="department" id="department" value="58accd819666a1de296cdfb4" class="text ui-widget-content ui-corner-all">
+
+
+     <img id="blah" width="100" height="100" class="center" src="uploads/user-default-pic.gif" alt="">
+
+         <!--naje-->
+    <input id="fileupload" type="file" name="files[]" >
+    <input type="button" id="upload-image" value="Uladd image">
+
+     <!-- Allow form submission with keyboard without duplicating the dialog button -->
+     <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+   </fieldset>
+ </form>
+</div>
+
+<div id="update-dialog-form" title="Update user">
+ <p class="validateTips">All form fields are required.</p>
+
+ <form id="update-user-form">
+   <fieldset>
+     <label for="name">Name</label>
+     <input type="text" name="name" id="update-name" value="" class="text ui-widget-content ui-corner-all">
+     <br/>
+     <label for="email">Email</label>
+     <input type="text" name="email" id="update-email" value="" class="text ui-widget-content ui-corner-all">
+
+     <input type="hidden" name="image_url" id="update-image-url" value="uploads/user-default-pic.gif" class="text ui-widget-content ui-corner-all">
+
+    <input type="hidden" name="department" id="update-department" value="" >
+    <input type="hidden" name="_id" id="update-employee-id" value="" >
+
+    <!--naje-->
+
+     <img id="update-blah" width="100" height="100" src="" alt="">
+
+      <input id="update-fileupload" type="file" name="files[]" >
+    <input type="button" id="update-upload-image" value="Update Image" name="">
+
+     <!-- Allow form submission with keyboard without duplicating the dialog button -->
+     <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+   </fieldset>
+ </form>
+</div>
+
+
+
+  <script src="vendors/js/main.js"></script>
+   <script src="vendors/js/ajaxRequest.js"></script>
+</html>

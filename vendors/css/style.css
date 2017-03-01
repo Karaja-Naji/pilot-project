@@ -1,0 +1,24 @@
+.container{
+
+}
+.tab-pane.ui-accordion-content{
+     max-height: 500px;
+}
+.bar {
+    height: 18px;
+    background: green;
+}
+input[type='file'] {
+  opacity:0
+}
+.container.bootstrap.snippet{
+	width: 970px;
+}
+#blah , #update-blah{
+    margin-top: 10px;
+    margin-left: 25%;
+}
+#upload-image, #update-upload-image
+{
+    margin-left: 25%;
+}
